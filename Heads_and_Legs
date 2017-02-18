@@ -1,0 +1,23 @@
+public class Kata
+{
+  public static object Animals(int heads, int legs)
+  {
+   int [] result = new int [] { 0, 0 };
+    int cows = 0;
+    int cowlegs = 0;
+    int chickens = 0;
+    int chickenlegs = heads * 2;
+    if (legs % 2 == 1 || legs < 2 * heads || legs > 4 * heads)
+    {
+    return "No solutions";
+    }
+    while (chickenlegs + cowlegs < legs)
+    {
+    chickenlegs = chickenlegs - 2;
+    cowlegs = cowlegs + 4;
+    }
+    cows = cowlegs / 4;
+    chickens = chickenlegs / 2;
+              return result = new int[] {chickens, cows};
+    } 
+   }
